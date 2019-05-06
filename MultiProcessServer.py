@@ -11,6 +11,7 @@ from PIL import Image
 import hashlib
 import base64
 import io
+import random
 
 
 def MyServerFunction(clientSocket:socket,endProgram:int):
@@ -25,7 +26,8 @@ def MyServerFunction(clientSocket:socket,endProgram:int):
 
 	if msg == "NAME":
 		print("Identfied name request")
-		clientSocket.send(b"SERVER running courtesy PYTHON\r\n")
+		clientSocket.send(b"MultiProcess SERVER running courtesy PYTHON\r\n")
+		time.sleep(random.randrange(5,15))
 		clientSocket.close()
 		return 0
 
