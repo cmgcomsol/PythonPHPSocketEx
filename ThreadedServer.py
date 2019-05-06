@@ -1,3 +1,6 @@
+'''
+my first trial with threaded server crude but working
+'''
 import socket
 import threading
 import time
