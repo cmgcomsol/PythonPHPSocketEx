@@ -158,7 +158,7 @@ while 1:
 	count+=1
 	myConnList.append(MyServerSocket(clientsocket))
 	myConnList[-1].run()
-	if myConnList[-1].endProgram==True:
+	if myConnList[-1].endProgram==True: #not tested but it will produce a race and thereby fail
 		break
 
 	tmpList=[]

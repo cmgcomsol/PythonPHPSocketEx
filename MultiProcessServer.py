@@ -25,9 +25,9 @@ def MyServerFunction(clientSocket:socket,endProgram:int):
 	# print(msg=="NAME")
 
 	if msg == "NAME":
+		time.sleep(random.randrange(15, 25))
 		print("Identfied name request")
 		clientSocket.send(b"MultiProcess SERVER running courtesy PYTHON\r\n")
-		time.sleep(random.randrange(5,15))
 		clientSocket.close()
 		return 0
 
@@ -157,7 +157,7 @@ while 1:
 	print(endProgram.value)
 	if endProgram.value == 1:
 		print(count, "Ending...")
-		time.sleep(1)
+		#time.sleep(1) #not required ?
 		for item in myConnList:
 			if item.is_alive():
 				item.join()

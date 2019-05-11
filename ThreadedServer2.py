@@ -14,8 +14,6 @@ endProgram=False
 
 def MyServerFunction(clientSocket:socket):
 	global endProgram
-	endProgram=False
-
 	byteObj = clientSocket.recv(2097152)
 	# b=bytearray();
 	print("Received obj", byteObj)
